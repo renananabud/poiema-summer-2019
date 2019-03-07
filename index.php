@@ -1,15 +1,18 @@
-<?php
-	require_once __DIR__ . "/_config/config_vars.php";
-	
-	require_once __DIR__ . "/classes/Conexao.php";
 
-    $conn = new Conexao();
-	$sql = "SELECT URL_STREAM FROM config";
-    $qry = $conn->prepare($sql);
-    $qry->execute();
-    $res = $qry->fetch();
-    $urlStream = $res["URL_STREAM"];
+<?php
+  require_once __DIR__ . "/_config/config_vars.php";
+  require_once __DIR__ . "/classes/Conexao.php";
+?>	
+<!-- 
+
+ //    $conn = new Conexao();
+ // $sql = "SELECT URL_STREAM FROM config";
+ //    $qry = $conn->prepare($sql);
+ //    $qry->execute();
+ //    $res = $qry->fetch();
+ //    $urlStream = $res["URL_STREAM"];
 ?>
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,10 +83,10 @@
 						<form action="">
 							<div class="row">
 								<div class="col-sm-12 col-md-*  text-center">
-									<h4>ASSISTA AO VIVO!</h4>
-									<p class="horario">A partir das 19h!</p>
+									<h4>FIQUE POR DENTRO!</h4>
+									<!-- <p class="horario">A partir das 19h!</p> -->
 									<br>
-									<p>Por favor, preencha com o seu e-mail para assistir</p>
+									<p>Coloque o seu e-mail e fique por dentro de nossos eventos.</p>
 								</div>
 							</div>
 							<div class="row mt-2">
@@ -99,7 +102,7 @@
 						</form>
 					</div>
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe id="poiemastreamframe" src="<?php echo $urlStream; ?>" frameborder="0" allowfullscreen></iframe>
+						<!-- <iframe id="poiemastreamframe" src="<?php echo $urlStream; ?>" frameborder="0" allowfullscreen></iframe> -->
 					</div>		
 				</div>
 			</div>
@@ -111,13 +114,15 @@
 			<div class="col-sm-12 col-md-6 info-texto">
 				<h3>INFORMAÇÕES</h3>
 				<h1>POIEMA SUMMER 2019</h1>
-				<p class="">O Summer é a nossa conferência de carnaval. De 1º a 5 de março a Poiema reúne ministros de louvor e pregadores no bloco da igreja mais animada da cidade. Põe a roupa mais colorida, prepara o fogo do espírito que vamos ter as noites mais quentes que Taubaté já viu!</p>
-				<p class="">E, se você não pode estar aqui, a gente pode levar a festa até você! Faça a sua inscrição e acompanhe cada minuto do nosso Summer de onde estiver, online. É free.</p>
-				<p class="">Compartilha com a galera e não perde essa.</p>
+				<p class="">O Summer é a nossa conferência de carnaval, onde reunimos ministros de louvor e pregadores no bloco da igreja mais animada da cidade. A edição deste ano foi incrível!</p>
+				<p class="">E, se você não pôde estar aqui, a gente leva a festa até você!</p> 
+				<p>Confira como esses dias foram incríveis em nossa playlist no <a href="https://youtube.com.br/poiemeiros" target="about_blank">YOUTUBE</a> e em nosso podcast no <a href="<?php echo $Links["SoundCloud"]; ?>" target="about_blank">SOUNDCLOUD.</a> </p>
+				<p>Aproveite e confira nossas edições anteriores do <a href="https://www.youtube.com/playlist?list=PLc66QJZzOfqnLrL40AZdcUdfIvW4vtl75" target="about_blank">Summer de 2018 e 2017.</a></p>
+				
+				<p class="">Compartilha com a galera e não perde essa.</p>				
 			</div>
 			<div class="col-sm-12 col-md-6 info-texto-img">
 				<img src="img/summer-banner.jpg" alt="Poiema Summer 2019" class="img-fluid">
-				<h3 class="text-center"> DE 01 À 05 DE MARÇO</h3>
 			</div>
 		</div>
 	</section>
@@ -125,9 +130,9 @@
 	<section class='container poiema-network'>
 		<div class="row">
 			<div class="col-12 text-center">
-				<h2 class="text-center">FIQUE POR DENTRO</h2>
-				<a href="<?php echo $Links["Instagram"]; ?>"><img src="img/icons/instagram-roxo.png" alt="INSTAGRAM POIEMEIROS" class="media-icon"></a>
-				<a href="<?php echo $Links["Youtube"]; ?>"><img src="img/icons/youtube-roxo.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
+				<h2 class="text-center">CONFIRA O QUE ROLOU POR AQUI!</h2>
+				<a href="<?php echo $Links["Instagram"]; ?>" target="about_blank"><img src="img/icons/instagram-roxo.png" alt="INSTAGRAM POIEMEIROS" class="media-icon"></a>
+				<a href="<?php echo $Links["Youtube"]; ?>" target="about_blank"><img src="img/icons/youtube-roxo.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
 			</div>
 		</div>
 	</section>
@@ -139,10 +144,10 @@
 					<p>Copyright © 2019 <a href="<?php echo $Links["SiteOficial"]; ?>">Poiema</a> </p>
 				</div>
 				<div class="col-sm-6 offset-sm-1 col-md-8 col-lg-8 text-sm-center text-md-right">
-					<a href="<?php echo $Links["Instagram"]; ?>"><img src="img/icons/instagram.png" alt="INSTAGRAM POIEMEIROS" class="media-icon"></a>
-					<a href="<?php echo $Links["Youtube"]; ?>"><img src="img/icons/youtube.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
-					<a href="<?php echo $Links["Facebook"]; ?>"><img src="img/icons/facebook.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
-					<a href="<?php echo $Links["SoundCloud"]; ?>"><img src="img/icons/soundcloud.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
+					<a href="<?php echo $Links["Instagram"]; ?>" target="about_blank"><img src="img/icons/instagram.png" alt="INSTAGRAM POIEMEIROS" class="media-icon"></a>
+					<a href="<?php echo $Links["Youtube"]; ?>" target="about_blank"><img src="img/icons/youtube.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
+					<a href="<?php echo $Links["Facebook"]; ?>" target="about_blank"><img src="img/icons/facebook.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
+					<a href="<?php echo $Links["SoundCloud"]; ?>" target="about_blank"><img src="img/icons/soundcloud.png" alt="YOUTUBE POIEMEIROS" class="media-icon"></a>
 				</div>
 			</div>
 		</div>
@@ -160,11 +165,11 @@
 					data: form.serialize(),
 					dataType: "JSON",
 					beforeSend: function(){
-						$("#btnEnviar").html('Preparando stream...');
+						$("#btnEnviar").html('Enviando e-mail...');
 					},
 					success: function (response) {
 						if (response.valid) {
-							$(".video-overlay").remove();
+							$("#btnEnviar").html('Cadastro com Sucesso!');
 						}
 					}
 				});

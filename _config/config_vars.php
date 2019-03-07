@@ -6,13 +6,13 @@ $Links = array(
 
     "SiteOficial" => "http://poiema.com.br",
 
-    "Instagram"  => "#",
+    "Instagram"  => "https://instagram.com/poiemeiros",
 
-    "Youtube"    => "#",
+    "Youtube"    => "https://youtube.com.br/poiemeiros",
 
-    "SoundCloud" => "#",
+    "SoundCloud" => "https://soundcloud.com/poiemeiros",
 
-    "Facebook"   => "#",
+    "Facebook"   => "https://facebook.com.br/poiemeiros",
 
     "Stream"    => "https://www.youtube.com/embed/poiemeiros/live",
 
